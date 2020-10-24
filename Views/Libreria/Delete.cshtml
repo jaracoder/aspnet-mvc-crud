@@ -1,0 +1,46 @@
+﻿@model Biblioteca.Models.Libro
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar libro</h2>
+<hr />
+<h3>¿Seguro que quieres eliminar el libro?</h3>
+<fieldset>
+    <legend>Libro</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Isbn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Isbn)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Titulo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Titulo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Autor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Autor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Anyo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Anyo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+<p>
+    <input type="submit" value="Eliminar" />
+    @Html.ActionLink("🔙 Volver al listado", "Index", "Libreria", new object { }, new { @class = "space-80" })
+</p>
+}

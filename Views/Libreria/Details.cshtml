@@ -1,0 +1,43 @@
+﻿@model Biblioteca.Models.Libro
+
+@{
+    ViewBag.Title = "Detalles del libro";
+}
+
+    <h2>@ViewBag.Title</h2>
+<hr />
+
+<fieldset>
+    <legend>Libro</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Isbn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Isbn)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Titulo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Titulo)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Autor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Autor)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Anyo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Anyo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("🔙 Volver al listado", "Index", "Libreria", new object { }, new {  })
+</p>

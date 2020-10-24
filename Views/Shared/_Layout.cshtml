@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">📗 @Html.ActionLink("Biblioteca", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Subir un libro", "Create", "Libreria")</li>
+                            <li>@Html.ActionLink("Listado de libros", "Index", "Libreria")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+
+        <footer>
+            <div class="content-wrapper">
+                <div style="padding-top:30px;">
+                    <p>&copy; @DateTime.Now.Year | 🔥<a target="_blank" title="&copy; jaracoder.com" href="//jaracoder.com">jaracoder.com</a></p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

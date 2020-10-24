@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Biblioteca.Models.Libro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de libros</h2>
+
+
+<br />
+
+<div>
+@Html.DropDownList("Tipos")
+</div>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Isbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anyo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Isbn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anyo)
+        </td>
+        <td>
+            @Html.ActionLink("📝", "Edit", new { id = item.Isbn }) |
+            @Html.ActionLink("👀", "Details", new {  id = item.Isbn  }) |
+            @Html.ActionLink("❌", "Delete", new { id = item.Isbn })
+        </td>
+    </tr>
+}
+
+</table>
