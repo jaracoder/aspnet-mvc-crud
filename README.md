@@ -9,7 +9,7 @@ Ejemplo de aplicación web en <code>ASP.NET</code> utilizando el patrón de arqu
 
 ## Licencia
 
-Este proyecto está bajo la licencia de [GNU General Public License v3.0](https://github.com/jaracoder/ASP.NET.WebControl.Toolkit/blob/main/LICENSE.MD).
+Este proyecto está bajo la licencia de [GNU General Public License v3.0](https://github.com/jaracoder/ASP.NET.MVC.CRUD/blob/master/LICENSE.MD).
 
 ---
 _escrito con ❤️ por [jaracoder](https://github.com/jaracoder)._
